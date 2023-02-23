@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaInfoCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import allMovies from "../data";
+import allMovies from "../data/data-movies";
 
 const Movies = () => {
     const [searchingMovie, setSearchingMovie] = useState("")

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
-import allMovies from "../data";
+import allMovies from "../data/data-movies";
 import {TiArrowBack} from "react-icons/ti";
 
 const Detail = () => {

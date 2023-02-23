@@ -1,4 +1,5 @@
 import React from 'react'
+import recipes from '../data/data-recipes'
 
 const OwnRecipes = () => {
   return (
@@ -7,11 +8,21 @@ const OwnRecipes = () => {
       <form>
         <input type="text" placeholder='Name of recipe' /><br />
         <textarea placeholder='Your recipe step by step' /><br />
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Add new recipe" />
       </form>
 
       <section>
-        <p>List of your recipes...</p>
+        {
+          recipes.map((recipe) => {
+            const {id, name, instructions} = recipe
+
+            return <article key={id}>
+              <h3>{name}</h3>
+              <button>Delete</button>
+              <p>{instructions}</p>
+            </article>
+          })
+        }
       </section>
     </main>
   )
