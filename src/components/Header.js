@@ -6,7 +6,8 @@ const Header = () => {
     <header>
         <nav>
             <NavLink to="/">Home</NavLink><br />
-            <NavLink to="own-rec">Your own recipes</NavLink>
+            <NavLink to="/movies">Movie to the meal</NavLink><br />
+            <NavLink to="/own-rec">Your own recipes</NavLink>
         </nav>
         <img src="/images/header-img.png" alt="happy cooks" />
         <h1>Today's Meal</h1>
