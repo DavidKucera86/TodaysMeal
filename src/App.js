@@ -18,7 +18,7 @@ const App = () => {
           <Route path="/" element={<SharedLayout />}>
             <Route index element={<Home />} />
             <Route path="/movies" element={<Movies />} />
-            <Route path="/own-rec" element={<OwnRecipes />} />
+            <Route path="/recipes" element={<OwnRecipes />} />
             <Route path="/detail/:idDetail" element={<Detail />} />
             <Route path="*" element={<Error />} />
           </Route>
