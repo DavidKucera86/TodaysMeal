@@ -1,7 +1,8 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import allMovies from "../data/data-movies";
-import {TiArrowBack} from "react-icons/ti";
+import { TiArrowBack } from "react-icons/ti";
+import { StyledDetail } from "../components/styles/Detail.styled";
 
 const Detail = () => {
   const { idDetail } = useParams();
@@ -13,17 +14,19 @@ const Detail = () => {
   const { image, title, description, age, tags } = chosenMovie;
 
   return (
-    <main>
-      <h3>{title}</h3>
+    <StyledDetail>
       <img src={image} alt={title} />
+      <h3>
+        <small>Movie to the Meal:</small> <br /> {title}
+      </h3>
       <p>{description}</p>
       <p>{age}</p>
       <p>{tags}</p>
       <Link to={`/movies`}>
         <TiArrowBack />
-        <span>Back to Movies</span>
+        <span>Back to the Movies</span>
       </Link>
-    </main>
+    </StyledDetail>
   );
 };
 
