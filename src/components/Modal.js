@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
+import { StyledModal } from "./styles/Modal.styled";
 
-const Modal = ({ notificationContent, closeNotification }) => {
+const Modal = ({ notificationContent, closeNotification, notificationColor }) => {
   useEffect(() => {
       setTimeout(() => {
           closeNotification()
@@ -8,10 +9,10 @@ const Modal = ({ notificationContent, closeNotification }) => {
   },[closeNotification])
 
   return (
-    <section>
+    <StyledModal notificationColor={notificationColor}>
       <p>{notificationContent}</p>
       {/* <p onClick={closeNotification}>X</p> */}
-    </section>
+    </StyledModal>
   );
 };
 

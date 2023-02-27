@@ -1,5 +1,6 @@
 import React, { useReducer, useState } from "react";
 import Modal from "../components/Modal";
+import { StyledOwnRecipes } from "../components/styles/OwnRecipes.styled";
 
 const reducer = (state, action) => {
   if (action.type === "ADD_RECIPE") {
@@ -10,6 +11,7 @@ const reducer = (state, action) => {
       recipes: newRecipes,
       showNotification: true,
       notificationContent: `Recipe "${action.payload.name}" was added.`,
+      notificationColor: "green"
     };
   }
 
@@ -22,6 +24,7 @@ const reducer = (state, action) => {
       recipes: filteredRecipes,
       showNotification: true,
       notificationContent: `Recipe "${action.payload[1]}" was deleted.`,
+      notificationColor: "green"
     };
   }
 
@@ -30,6 +33,7 @@ const reducer = (state, action) => {
       ...state,
       showNotification: true,
       notificationContent: "Missing data, please fill all the inputs.",
+      notificationColor: "red"
     };
   }
 
@@ -47,6 +51,7 @@ const defaultState = {
   recipes: [],
   showNotification: false,
   notificationContent: "",
+  notificationColor: "green"
 };
 
 const OwnRecipes = () => {
@@ -76,7 +81,7 @@ const OwnRecipes = () => {
   };
 
   return (
-    <main>
+    <StyledOwnRecipes>
       <h2>Add your own recipe</h2>
       <form onSubmit={submitForm}>
         <input
@@ -85,19 +90,20 @@ const OwnRecipes = () => {
           value={recipeName}
           onChange={(e) => setRecipeName(e.target.value)}
         />
-        <br />
+        
         <textarea
           placeholder="Your recipe step by step"
           value={recipeInstructions}
           onChange={(e) => setRecipeInstructions(e.target.value)}
         />
-        <br />
+        
         <input type="submit" value="Add new recipe" />
       </form>
       {state.showNotification && (
         <Modal
           notificationContent={state.notificationContent}
           closeNotification={closeNotification}
+          notificationColor={state.notificationColor}
         />
       )}
 
@@ -120,7 +126,7 @@ const OwnRecipes = () => {
           );
         })}
       </section>
-    </main>
+    </StyledOwnRecipes>
   );
 };
 
