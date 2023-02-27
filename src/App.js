@@ -17,19 +17,19 @@ const App = () => {
     <>
       <GlobalStyles />
       <StyledContainer>
-      <QueryClientProvider client={queryClient}>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<SharedLayout />}>
-              <Route index element={<Home />} />
-              <Route path="/movies" element={<Movies />} />
-              <Route path="/recipes" element={<OwnRecipes />} />
-              <Route path="/detail/:idDetail" element={<Detail />} />
-              <Route path="*" element={<Error />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-      </QueryClientProvider>
+        <QueryClientProvider client={queryClient}>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<SharedLayout />}>
+                <Route index element={<Home />} />
+                <Route path="/movies" element={<Movies />} />
+                <Route path="/recipes" element={<OwnRecipes />} />
+                <Route path="/detail/:idDetail" element={<Detail />} />
+                <Route path="*" element={<Error />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </QueryClientProvider>
       </StyledContainer>
     </>
   );
