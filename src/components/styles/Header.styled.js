@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
-  
-
   nav {
     display: flex;
     flex-direction: row;
@@ -15,7 +13,7 @@ export const StyledHeader = styled.header`
     width: 66%;
     z-index: 100;
     margin-top: 1rem;
-    
+
     a {
       &:link,
       &:visited {

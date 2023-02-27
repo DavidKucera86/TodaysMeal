@@ -81,7 +81,7 @@ export const StyledOwnRecipes = styled.main`
         border: none;
         border-radius: 3.25rem;
         box-shadow: 0 0 10px rgba(210, 105, 30, 0.55);
-        margin-top: .5rem;
+        margin-top: 0.5rem;
         padding: 0.5rem 2rem;
         color: deeppink;
       }

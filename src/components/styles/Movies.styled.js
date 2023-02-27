@@ -1,24 +1,23 @@
 import styled from "styled-components";
 
 export const StyledMovies = styled.main`
-
-form {
+  form {
     text-align: center;
     input {
-        font-size: 2rem;
-        max-width: 500px;
-        outline: none;
-        border: none;
-        border-bottom: .25rem solid hotpink;
-        border-radius: 50%;
-        text-align: center;
-        color: dimgray;
-        padding: 1rem;
-        background-color: lavender;
+      font-size: 2rem;
+      max-width: 500px;
+      outline: none;
+      border: none;
+      border-bottom: 0.25rem solid hotpink;
+      border-radius: 50%;
+      text-align: center;
+      color: dimgray;
+      padding: 1rem;
+      background-color: lavender;
     }
-}
+  }
 
-section {
+  section {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -55,9 +54,9 @@ section {
         justify-content: center;
         align-items: center;
         div {
-            margin-left: 1rem;
+          margin-left: 1rem;
         }
-        
+
         &:visited,
         &:link {
           text-decoration: none;
@@ -74,4 +73,4 @@ section {
       }
     }
   }
-`
+`;

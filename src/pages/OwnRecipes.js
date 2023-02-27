@@ -11,7 +11,7 @@ const reducer = (state, action) => {
       recipes: newRecipes,
       showNotification: true,
       notificationContent: `Recipe "${action.payload.name}" was added.`,
-      notificationColor: "green"
+      notificationColor: "green",
     };
   }
 
@@ -24,7 +24,7 @@ const reducer = (state, action) => {
       recipes: filteredRecipes,
       showNotification: true,
       notificationContent: `Recipe "${action.payload[1]}" was deleted.`,
-      notificationColor: "green"
+      notificationColor: "green",
     };
   }
 
@@ -33,7 +33,7 @@ const reducer = (state, action) => {
       ...state,
       showNotification: true,
       notificationContent: "Missing data, please fill all the inputs.",
-      notificationColor: "red"
+      notificationColor: "red",
     };
   }
 
@@ -51,7 +51,7 @@ const defaultState = {
   recipes: [],
   showNotification: false,
   notificationContent: "",
-  notificationColor: "green"
+  notificationColor: "green",
 };
 
 const OwnRecipes = () => {
@@ -90,13 +90,13 @@ const OwnRecipes = () => {
           value={recipeName}
           onChange={(e) => setRecipeName(e.target.value)}
         />
-        
+
         <textarea
           placeholder="Your recipe step by step"
           value={recipeInstructions}
           onChange={(e) => setRecipeInstructions(e.target.value)}
         />
-        
+
         <input type="submit" value="Add new recipe" />
       </form>
       {state.showNotification && (
