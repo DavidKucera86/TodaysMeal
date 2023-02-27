@@ -13,6 +13,7 @@ export const StyledFooter = styled.footer`
   .proclaimer {
     max-width: 32rem;
     margin-right: 6rem;
+    padding-bottom: 1rem;
 
     a {
       &:link,

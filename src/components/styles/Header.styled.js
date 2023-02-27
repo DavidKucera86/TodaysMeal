@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
+  
+
   nav {
     display: flex;
     flex-direction: row;
@@ -9,7 +11,11 @@ export const StyledHeader = styled.header`
     font-size: 1.5rem;
     background-color: chocolate;
     border-radius: 50%;
-
+    position: fixed;
+    width: 66%;
+    z-index: 100;
+    margin-top: 1rem;
+    
     a {
       &:link,
       &:visited {
@@ -25,6 +31,10 @@ export const StyledHeader = styled.header`
         color: hotpink;
       }
     }
+  }
+
+  img {
+    margin-top: 2rem;
   }
 
   h1 {
