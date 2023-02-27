@@ -1,4 +1,5 @@
 import React from "react";
+import { StyledHome } from "../components/styles/Home.styled";
 import useMeals from "../query-hooks/useMeals";
 
 const Home = () => {
@@ -6,21 +7,23 @@ const Home = () => {
   const meals = useMeals();
 
   return (
-    <main>
+    <StyledHome>
       <h2>Get Inspired By American Cousine:</h2>
-      {meals.isLoading && <p>Loading meals...</p>}
+      <section>
+        {meals.isLoading && <p>Loading meals...</p>}
 
-      {meals.isError && <p>Could not fetch meals...</p>}
+        {meals.isError && <p>Could not fetch meals...</p>}
+      </section>
+      <div>
+        {meals.isSuccess &&
+          meals.data.map((meal) => {
+            const { idMeal, strMeal, strMealThumb } = meal;
 
-      {meals.isSuccess &&
-        meals.data.map((meal) => {
-          const { idMeal, strMeal, strMealThumb } = meal;
+            return (
+              <article key={idMeal}>
+                <img src={strMealThumb} alt="" />
+                <h3>{strMeal}</h3>
 
-          return (
-            <article key={idMeal}>
-              <img src={strMealThumb} alt="" />
-              <h2>{strMeal}</h2>
-              <p>
                 <a
                   href={`https://www.themealdb.com/meal.php?c=${idMeal}`}
                   target="_blank"
@@ -28,11 +31,11 @@ const Home = () => {
                 >
                   recipe
                 </a>
-              </p>
-            </article>
-          );
-        })}
-    </main>
+              </article>
+            );
+          })}
+      </div>
+    </StyledHome>
   );
 };
 
