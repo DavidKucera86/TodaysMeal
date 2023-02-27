@@ -17,6 +17,14 @@ const Footer = () => {
             rel="noreferrer"
           >
             TheMealDB
+          </a>{" "}
+          and movie pictures from{" "}
+          <a
+            href="https://www.youtube.com/playlist?list=PLQ8x_VWW6AkvURLFWrOZy1e8cZuyx_xN8"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Hackni svou budoucnost
           </a>
           . If you wish to contact me, just do it throught some social network.
         </p>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaInfoCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { StyledMovies } from "../components/styles/Movies.styled";
 import allMovies from "../data/data-movies";
 
 const Movies = () => {
@@ -16,7 +17,7 @@ const Movies = () => {
     },[searchingMovie])
 
   return (
-    <main>
+    <StyledMovies>
       <h2>Which movie to the meal do you wish?</h2>
       <form>
         <input type="text" placeholder="Search for a Movie"
@@ -29,17 +30,17 @@ const Movies = () => {
           const { id, image, title } = oneMovie;
           return (
             <article key={id}>
-              <h3>{title}</h3>
               <img src={image} alt={title} />
+              <h3>{title}</h3>              
               <Link to={`/detail/${id}`}>
                 <FaInfoCircle />
-                <span>More info</span>
+                <div>More info</div>
               </Link>
             </article>
           );
         })}
       </section>
-    </main>
+    </StyledMovies>
   );
 };
 
