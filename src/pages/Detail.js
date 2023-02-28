@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import allMovies from "../data/data-movies";
 
 import { StyledDetail } from "../components/styles/Detail.styled";
@@ -23,7 +23,7 @@ const Detail = () => {
       <p>{description}</p>
       <p>{age}</p>
       <p>{tags}</p>
-      <Button url="/movies" text="Back" />
+      <Link to="/movies">Back</Link>
     </StyledDetail>
   );
 };
