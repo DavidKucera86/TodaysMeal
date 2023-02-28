@@ -1,4 +1,5 @@
 import React from "react";
+import Article from "../components/Article";
 import { StyledHome } from "../components/styles/Home.styled";
 import useMeals from "../query-hooks/useMeals";
 
@@ -19,21 +20,17 @@ const Home = () => {
           meals.data.map((meal) => {
             const { idMeal, strMeal, strMealThumb } = meal;
 
-            return (
-              <article key={idMeal}>
-                <img src={strMealThumb} alt="" />
-                <h3>{strMeal}</h3>
-
-                <a
-                  href={`https://www.themealdb.com/meal.php?c=${idMeal}`}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  recipe
-                </a>
-              </article>
-            );
-          })}
+            return (              
+              <Article                 
+                name={strMeal}
+                image={strMealThumb}
+                url={`https://www.themealdb.com/meal.php?c=${idMeal}`}
+                target="_blank"
+                text="Recipe"
+                key={idMeal}
+              />            
+          )}
+        )}
       </div>
     </StyledHome>
   );

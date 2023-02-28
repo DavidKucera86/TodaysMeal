@@ -1,25 +1,30 @@
 import styled from "styled-components";
 
 export const StyledFooter = styled.footer`
+  background-color: burlywood;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+
+
+.footer-row {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  background-color: chocolate;
-  color: lavender;
-  border-radius: 50%;
-  padding: 1rem 0;
+  flex-wrap: wrap;  
+  color: ghostwhite;  
+  padding: 0.5rem 1rem;
 
   .proclaimer {
-    max-width: 32rem;
-    margin-right: 6rem;
-    padding-bottom: 1rem;
+    max-width: 32rem;    
 
     a {
       &:link,
       &:visited {
         text-decoration: none;
-        color: lavender;
+        color: ghostwhite;
         font-weight: 900;
         transition: all 0.5s linear;
       }
@@ -35,12 +40,13 @@ export const StyledFooter = styled.footer`
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 1rem;
 
     li {
       list-style: none;
     }
     a {
-      border: 1px solid lavender;
+      border: .125rem solid lavender;
       border-radius: 50%;
       color: lavender;
       display: inline-flex;
@@ -54,8 +60,15 @@ export const StyledFooter = styled.footer`
 
       &:hover,
       &:active {
-        transform: scale(1.1);
+        border: .125rem solid hotpink;
       }
     }
   }
+}
+
+nav {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+  
 `;

@@ -108,23 +108,26 @@ const OwnRecipes = () => {
       )}
 
       <section>
-        {state.recipes.map((recipe) => {
-          const { id, name, instructions } = recipe;
+        
+        {
+          state.recipes.map((recipe) =>{
+            const {id, name, instructions} = recipe
 
-          return (
-            <article key={id}>
-              <h3>{name}</h3>
-              <p>{instructions}</p>
-              <button
-                onClick={() =>
-                  dispatch({ type: "DELETE_RECIPE", payload: [id, name] })
-                }
-              >
-                Delete
-              </button>
-            </article>
-          );
-        })}
+            return (
+              <article key={id}>
+                <h3>{name}</h3>
+                <p>{instructions}</p>
+                <button 
+                  onClick={() => dispatch({type: "DELETE_RECIPE", payload: [id, name]})}
+                >
+                  Delete
+                </button>
+
+              </article>
+            )
+          })
+        }
+        
       </section>
     </StyledOwnRecipes>
   );

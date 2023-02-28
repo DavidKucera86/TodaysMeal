@@ -1,8 +1,9 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import allMovies from "../data/data-movies";
-import { TiArrowBack } from "react-icons/ti";
+
 import { StyledDetail } from "../components/styles/Detail.styled";
+import Button from "../components/Button";
 
 const Detail = () => {
   const { idDetail } = useParams();
@@ -22,10 +23,7 @@ const Detail = () => {
       <p>{description}</p>
       <p>{age}</p>
       <p>{tags}</p>
-      <Link to={`/movies`}>
-        <TiArrowBack />
-        <span>Back to the Movies</span>
-      </Link>
+      <Button url="/movies" text="Back" />
     </StyledDetail>
   );
 };

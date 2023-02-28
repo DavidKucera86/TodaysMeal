@@ -6,10 +6,11 @@ export const StyledOwnRecipes = styled.main`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 2rem;
 
     input[type="text"] {
       font-size: 1rem;
-      width: 38rem;
+      max-width: 38rem;
       outline: none;
       border: none;
       border-bottom: 0.25rem solid hotpink;
@@ -23,7 +24,7 @@ export const StyledOwnRecipes = styled.main`
 
     textarea {
       font-size: 1rem;
-      width: 38rem;
+      max-width: 38rem;
       height: 10rem;
       outline: none;
       border: none;
@@ -37,17 +38,17 @@ export const StyledOwnRecipes = styled.main`
     }
 
     input[type="submit"] {
-      font-size: 1.5rem;
       border: none;
+      font-size: 1.5rem;
+      font-weight: bold;
       border-radius: 3.25rem;
       box-shadow: 0 0 10px rgba(210, 105, 30, 0.55);
-      margin-bottom: 1rem;
       padding: 1rem 3.75rem;
-      color: deeppink;
-      transition: all 0.5s linear;
+      color: burlywood;
 
       &:hover {
-        color: chocolate;
+        background-color: hotpink;
+          color: ghostwhite;
         cursor: pointer;
       }
     }
@@ -77,14 +78,22 @@ export const StyledOwnRecipes = styled.main`
       }
 
       button {
-        font-size: 1rem;
         border: none;
+        font-size: 1rem;
+        font-weight: bold;
         border-radius: 3.25rem;
         box-shadow: 0 0 10px rgba(210, 105, 30, 0.55);
-        margin-top: 0.5rem;
-        padding: 0.5rem 2rem;
-        color: deeppink;
+        margin-top: 1rem;
+        padding: .5rem 1rem;
+        color: burlywood;
+
+        &:hover {
+          background-color: hotpink;
+            color: ghostwhite;
+          cursor: pointer;
+      }
+        }
       }
     }
-  }
+  
 `;

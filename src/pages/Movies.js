@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaInfoCircle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import Article from "../components/Article";
 import { StyledMovies } from "../components/styles/Movies.styled";
 import allMovies from "../data/data-movies";
 
@@ -33,14 +32,15 @@ const Movies = () => {
         {filteredMovies.map((oneMovie) => {
           const { id, image, title } = oneMovie;
           return (
-            <article key={id}>
-              <img src={image} alt={title} />
-              <h3>{title}</h3>
-              <Link to={`/detail/${id}`}>
-                <FaInfoCircle />
-                <div>More info</div>
-              </Link>
-            </article>
+           
+            <Article
+              name={title}
+              image={image}
+              url={`/detail/${id}`}
+              target=""
+              text="More info"
+              key={id}
+            />
           );
         })}
       </section>

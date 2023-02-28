@@ -13,7 +13,7 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         
-        background: lavender;
+        background: honeydew;
         color: dimgray;
         font-family: 'Poppins', sans-serif;
         font-size: 1.15em;
@@ -21,10 +21,10 @@ const GlobalStyles = createGlobalStyle`
     }
 
     h1 {
-        font-size: 5rem;
-        margin-top: 0;
-        margin-bottom: 1rem;
+        font-size: 5rem;        
+        margin: 1rem;        
         color: hotpink;
+        text-align: center; 
     }
 
     h2 {
@@ -38,6 +38,12 @@ const GlobalStyles = createGlobalStyle`
 
     img {
         max-width: 100%;
+    }
+
+    header, footer {
+        img {
+            width: 10rem;
+        }
     }
 
 `;
