@@ -1,12 +1,15 @@
-import React from 'react'
-import { StyledButton } from './styles/Button.styled'
+import React from "react";
 
-const Button = ({url, text, target}) => {
+import { StyledButton } from "./styles/Button.styled";
+
+const Button = ({ url, text, target, isDetail }) => {
   return (
     <StyledButton>
-        <a href={url} target={target} rel="noreferrer">{text}</a>
+      <a href={url} target={target} rel="noreferrer">
+        {text}
+      </a>
     </StyledButton>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

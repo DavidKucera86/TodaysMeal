@@ -4,7 +4,7 @@ export const StyledHeader = styled.header`
   .navigation {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     background-color: burlywood;

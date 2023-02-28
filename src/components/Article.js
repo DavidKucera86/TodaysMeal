@@ -7,7 +7,7 @@ const Article = ({ image, name, url, target, text }) => {
     <StyledArticle>
       <img src={image} alt={name} />
       <h3>{name}</h3>
-      <Button url={url} target={target} text={text} />
+      <Button url={url} target={target} text={text} isDetail="Y" />
     </StyledArticle>
   );
 };

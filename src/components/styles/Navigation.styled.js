@@ -1,17 +1,22 @@
 import styled from "styled-components";
 
 export const StyledNavigation = styled.nav`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+      
   .nav-list {
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: left;
     flex-wrap: wrap;
     background-color: peru ;
     border-radius: 5%;
-    max-width: 30rem;
-    
+        
     a {
       &:link,
       &:visited {
@@ -36,7 +41,8 @@ export const StyledNavigation = styled.nav`
 
     .hamburger-icon {
       color: ghostwhite;
-      font-size: 3rem;
+      font-size: 3rem;    
+      margin-right: 1rem;
       &:hover {
         color: hotpink;
         cursor: pointer;

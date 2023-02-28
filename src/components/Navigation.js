@@ -4,7 +4,7 @@ import { StyledNavigation } from "./styles/Navigation.styled";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navigation = () => {
-  const [showMenu, setShowMenu] = useState(false);
+  const [showMenu, setShowMenu] = useState(true);
 
   const scrollToTop = () => {
     window.scrollTo(0, 0);

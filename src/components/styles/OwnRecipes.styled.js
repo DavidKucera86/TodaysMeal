@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledOwnRecipes = styled.main`
+export const StyledOwnRecipes = styled.div`
   form {
     display: flex;
     flex-direction: column;
@@ -79,6 +79,7 @@ export const StyledOwnRecipes = styled.main`
 
       button {
         border: none;
+        outline: none;
         font-size: 1rem;
         font-weight: bold;
         border-radius: 3.25rem;

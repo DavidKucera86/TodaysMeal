@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     h1 {
-        font-size: 5rem;        
+        font-size: 4.5rem;        
         margin: 1rem;        
         color: hotpink;
         text-align: center; 

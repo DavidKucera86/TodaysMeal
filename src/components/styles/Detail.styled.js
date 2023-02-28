@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledDetail = styled.main`
+export const StyledDetail = styled.div`
   max-width: 19rem;
   margin: 1rem auto;
   display: flex;
