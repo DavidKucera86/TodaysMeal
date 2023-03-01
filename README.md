@@ -3,7 +3,7 @@
 Portfolio project with React Router, React Query, React Icons and Styled Components.
 
 ## When you try the application (link below), you will see 3 sections:
-- Home (loading and processing data from API (React Query + Axios)
+- Home (loading and processing data from API (React Query + Axios))
 - Movies (loading and processing data from local file, filtering items according to name, detail page with selected movie)
 - Recipes (working with form, add & delete operation, inputs validation)
 
